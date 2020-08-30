@@ -11,7 +11,7 @@ using namespace std;
 int main()
 {
 	string ipAddr = "192.168.42.102";	//server IP
-	int portnum = 48000;	//server listening port
+	int portnum = 48000;			//server listening port
 
 	//initialize winsock
 	WSAData wsadata;
@@ -35,7 +35,7 @@ int main()
 	//Fill in a hint structure
 	sockaddr_in soaddr;
 	soaddr.sin_family = AF_INET;
-	soaddr.sin_port = htons(48000);//host to network short
+	soaddr.sin_port = htons(48000);			//host to network short
 	inet_pton(AF_INET, ipAddr.c_str(), &soaddr.sin_addr);
 
 	//connect to server
