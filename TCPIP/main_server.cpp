@@ -34,7 +34,7 @@ int main()
 	//bind socket with IP and  port
 	sockaddr_in soaddr;
 	soaddr.sin_family = AF_INET;
-	soaddr.sin_port = htons(48000);//host to network short
+	soaddr.sin_port = htons(48000);			//host to network short
 	soaddr.sin_addr.S_un.S_addr = INADDR_ANY;	//bind to any address
 	if (bind(Ssocket, (sockaddr *)&soaddr, sizeof(soaddr)) != SUCCESS)
 	{
